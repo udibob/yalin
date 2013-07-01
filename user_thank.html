@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+    <head>
+
+        <!-- Basic Page Needs
+  ================================================== -->
+        <meta charset="utf-8">
+        <title>Sign up with Floatward</title>
+        <meta name="description" content=Write code easier and faster"">
+              <meta name="author" content="">
+
+        <!-- Mobile Specific Metas
+  ================================================== -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!-- CSS
+  ================================================== -->
+        <link rel="stylesheet" href="css/style.css" type="text/css"  media="all">
+        <link rel="stylesheet" href="fancybox/fancybox.css" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900|Oswald:300,400' rel='stylesheet' type='text/css'>
+
+        <!-- JS
+  ================================================== -->
+        <script type="text/javascript" src="js/jquery.min.js" ></script>
+        <!--[if lt IE 9]>
+        <script src="js/modernizr.custom.11889.js" type="text/javascript"></script>
+        <![endif]-->
+        <!-- HTML5 Shiv events (end)-->
+        <script type="text/javascript" src="js/nav-resp.js"></script>
+        <script type="text/javascript" src="js/colorize.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/freebase/suggest/4_2/suggest.min.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/freebase/suggest/4_2/suggest.min.js"></script>
+<script type="text/javascript">
+$(function() {
+  $("#myinput").suggest({filter:'(all type:/computer/software_genre)'});
+});
+</script>
+        <script>
+            $(document).ready(function(){
+                $("#btnSendJava").click(function(){
+                    var name  = $("input#name1").val();
+                    var email  = $("input#email1").val();
+                    var company_name = $("input#companyname1").val();
+                    var tech = $("input#tech1").val();
+                    var nteam = $("#nteam").val()
+                    var hours = $("#hours").val()
+                    var question = $("#question1").val()
+                    
+                    var isCorrect = true;
+                
+                    if(email == '' || email == null){
+                        isCorrect = false
+                    }
+                    
+                
+                    if(isCorrect){
+                       
+                        $.ajax({
+                            type: 'POST',
+                            url:'http://www.floatward.com/getribute/webresources/generic/company_email', 
+                            data: JSON.stringify({ name: name, email : email, company_name : company_name,
+                            tech : tech, nteam : nteam, hours : hours, nteam : nteam, hours : hours, question : question}),
+                            contentType: "application/json",
+                            dataType: 'json',
+                            complete: function(resp){
+                                //  alert(resp.getAllResponseHeaders());
+                                console.log(resp.status);
+                                window.location.href = "http://www.floatward.com/getribute/resources/yalin/user_thank.html"
+                            }
+                        });
+
+            
+                    }
+        
+                    return false;
+                
+                });
+            });
+        </script>
+        <!-- Favicons
+  ================================================== -->
+        <link rel="shortcut icon" href="images/floatward_fav.ico">
+
+    </head>
+    <body>
+
+        <!-- Primary Page Layout
+        ================================================== -->
+
+        <div id="wrap">
+            <!--<section id="top-head">
+            <div class="container">
+            <!--<div class="top-links"><img src="images/ico-ad04.png" alt=""> <a href="#">Form</a> | <a href="#">Terms</a> | <a href="#">Contact</a></div>
+            <div class="top-social"><a href="expert_sign_up.html"><img src="images/expert_signup.png" alt="images/expert_signup_over.png"></a></div></div>
+            <a href="#" class="magicmore">Expert programmers, Join us and start earning money</a></p>-->
+            <!--<div class="magic-link alignright">
+            <a class="get shadow1" href="expert_sign_up.html">Expert programmers Sign up</a><br class="clear" /></div>
+            </section>-->
+            <header id="header" class="container">
+                <div class="four columns logo"><a href="http://www.floatward.com"><img id="img-logo" src="images/logo_floatward_50.png" alt="logo"></a><br>
+                    <h4 class="slogan1">Better code, Faster.</h4></div>
+                <nav id="nav-wrap" class="twelve columns">
+                    <ul id="nav">
+                        <li><a data-description="Overview" href="http://www.floatward.com">Home</a>
+                        </li>
+                        <li><a data-description="Learn how it works" href="how.html">How</a>
+                        </li>
+                        </li>
+                        <li><a data-description="Our plans"  href="pricing.html">Pricing</a>
+                        <li><a data-description="Time to meet Floatward"  href="about.html">About</a></li>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /nav-wrap -->
+                <!--<p>&nbsp;</p>-->
+            </header><!-- end-header -->
+            <section id="headline">
+                <div class="container">
+                    <div class="clear"></div>
+                    <h2>Thank you for applying for Floatward</h2>
+                </div>
+            </section>
+            <section class="container page-content" >
+                <!--<div class="one-third column">
+                <h4>One third</h4>
+                <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+                
+                Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                
+                </div>
+                <div class="one-third column">
+                <h4>One third</h4>
+                <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+                
+                Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                
+                </div>
+                <div class="one-third column">
+                <h4>One third</h4>
+                <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+                
+                Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                
+                </div>
+                <div class="clear"></div>
+                <div class="sixteen columns"><hr></div>
+                
+                <div class="eight columns">
+                <h4>One Half</h4>
+                <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+                
+                Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Med ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+                
+                </div>
+                <div class="eight columns">
+                <h4>One Half</h4>
+                <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+                
+                Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Med ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+                
+                </div>-->
+                <div class="container">
+                    <div class="clear"></div>
+                    <div class="sixteen columns"><hr></div>
+                    <div class="two-thirds column">
+                        <h5>We would evaluate your application and get back to you shortly to let you know your status
+<br/><br/>
+Thanks
+<br/>
+The Pairlive team</h5>
+                        <br/>
+                    </div>
+                </div>
+               
+
+                    <!--<div class="clear"></div>
+                    <div class="sixteen columns"><hr></div>
+                    
+                    <div class="one-third column">
+                    <h4>One third</h4>
+                    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+                    
+                    Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                    
+                    </div>
+                    <div class="two-thirds column">
+                    <h4>Two thirds</h4>
+                    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+                    
+                    Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc Med ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+                    
+                    </div>
+                    
+                    <div class="clear"></div>
+                    <div class="sixteen columns"><hr></div>
+                    
+                    <div class="four columns">
+                    <h4>One fourth</h4>
+                    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+                    
+                    Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                    
+                    </div>
+                    <div class="four columns">
+                    <h4>One fourth</h4>
+                    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+                    
+                    Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                    
+                    </div>
+                    <div class="four columns">
+                    <h4>One fourth</h4>
+                    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+                    
+                    Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                    
+                    </div>
+                    <div class="four columns">
+                    <h4>One fourth</h4>
+                    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+                    
+                    Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                    
+                    </div>
+                    
+                    <div class="clear"></div>
+                    <div class="sixteen columns"><hr></div>
+                    
+                    <div class="three columns">
+                    <h4>One fifth</h4>
+                    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+                    
+                    Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                    
+                    </div>
+                    <div class="three columns">
+                    <h4>One fifth</h4>
+                    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+                    
+                    Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                    
+                    </div>
+                    <div class="three columns">
+                    <h4>One fifth</h4>
+                    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+                    
+                    Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                    
+                    </div>
+                    <div class="three columns">
+                    <h4>One fifth</h4>
+                    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+                    
+                    Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                    
+                    </div>
+                    <div class="three columns">
+                    <h4>One fifth</h4>
+                    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+                    
+                    Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                    
+                    </div>-->
+
+                    <div class="white-space"></div>
+
+            </section><!-- container -->
+
+            <footer id="footer">
+                <div class="container footer-in">
+                    <div class="disclaimer four columns">
+                        <h4 class="subtitle">Disclaimer</h4>
+                        <br />
+                        <p>
+                            Important: We are building up, we'll launch our service once we can supply the quality of service we would like to entitle our clients.
+                        </p>
+                        <br />
+                        <div class="copyright-txt">&nbsp; Floatward © 2013. All Rights Reserved.<br>
+                            <a href="#" class="terms">Terms of Service</a> | <a href="#" class="terms">Privacy Policy</a></div>
+                    </div><!-- Disclaimer -->
+
+
+                    <div class="four columns">
+                        <h4 class="subtitle">Contact Information</h4>
+                        <br />
+                        <p><img src="images/social_address.png" class="alignleft"  alt="">&nbsp;<strong>Address:</strong>
+                            <br />
+                            Centro Culturale Santa Chiara, via Santa croce 65, 38122 Trento, Italy</p>
+
+                        <p><img src="images/social_phone.png" class="alignleft" alt="">&nbsp;<strong>Phone:</strong>
+                            <br />
+                            + 39 (388) 639 5038<br />
+                        </p>
+
+                        <p><img src="images/social_mail.png" class="alignleft" alt="">&nbsp;<strong>Email:</strong>
+                            <br />
+                            info@floatward.com<br />
+                        </p>
+                    </div><!-- end-follow2 -->
+
+                    <div class="four columns">
+                        <!--<h4 class="subtitle">flickr photostream</h4>
+                        <br />
+                        <div class="flickr-feed">
+                        <script type="text/javascript" src="http://www.flickr.com/badge_code.gne?count=12&display=random&size=square&nsid=36587311@N08&raw=1"></script>
+                        <div class="clear"></div>
+                        </div>
+                        </div><!-- end-flickr -->
+
+                        <div class="four columns">
+                            <!--<h4 class="subtitle">Contact Information</h4>
+                            <br />
+                            <p><img src="images/social_address.png" class="alignleft"  alt="">&nbsp;<strong>Address:</strong>
+                            <br />
+                            No.28 - 63739 street lorem ipsum City, Country</p>
+                            
+                            <p><img src="images/social_phone.png" class="alignleft" alt="">&nbsp;<strong>Phone:</strong>
+                            <br />
+                            + 1 (234) 567 8901<br />
+                            </p>
+                            
+                            <p><img src="images/social_mail.png" class="alignleft" alt="">&nbsp;<strong>Email:</strong>
+                            <br />
+                            support@yoursite.com<br />
+                            </p>
+                            </div><!-- end-contact2 -->
+                        </div><!-- end-footer-in -->
+                        <!--<div class="footbot" >
+                        <div class="footer-navi">
+                        <a href="#">Home</a> | <a href="#">About</a> | <a href="#">Contact</a> | <a href="#">Blog</a> | <a href="#">Portfolio</a>
+                        </div>
+                        <img src="images/logo-footer.png" alt="">
+                        </div><!-- end-footbot -->
+                        </footer>
+                        <!-- end-footer -->
+                        <span id="scroll-top"><a class="scrollup"></a></span>
+                    </div><!-- end-wrap -->
+                    <!-- End Document
+                    ================================================== -->
+                    <script type="text/javascript" src="js/yalin-custom.js" ></script>
+
+                    </body>
+                    </html>

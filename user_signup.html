@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Sign up with Floatward</title>
+	<meta name="description" content=Write code easier and faster"">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="css/style.css" type="text/css"  media="all">
+	<link rel="stylesheet" href="fancybox/fancybox.css" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900|Oswald:300,400' rel='stylesheet' type='text/css'>
+
+	<!-- JS
+  ================================================== -->
+   <script type="text/javascript" src="js/jquery.min.js" ></script>
+   <script>
+            $(document).ready(function(){
+                $("#sendbtnUserJava").click(function(){
+                    var name  = $("input#name2").val();
+                    var email  = $("input#email2").val();
+                    var tech = $("input#tech2").val();
+                    var country = $("input#country").val();
+                    var lang = $("#lang2").val()
+                    var question = $("#question2").val()
+                  
+                  var isCorrect = true;
+                
+                    if(email == '' || email == null){
+                        isCorrect = false
+                    }
+                    
+                
+                    if(isCorrect){
+                       
+                        $.ajax({
+                            type: 'POST',
+                            url:'http://www.floatward.com:8080/getribute/webresources/generic/user_email', 
+                            data: JSON.stringify({ name: name, email : email, tech : tech,country : country, lang : lang, question : question}),
+                            contentType: "application/json",
+                            dataType: 'json',
+                            complete: function(resp){
+                                //  alert(resp.getAllResponseHeaders());
+                                console.log(resp.status);
+                                window.location.href = "http://www.corriere.it"
+                            }
+                        });
+
+            
+                    }
+        
+                    return false;
+                
+                });
+            });
+        </script>
+   
+   
+   
+<!--[if lt IE 9]>
+<script src="js/modernizr.custom.11889.js" type="text/javascript"></script>
+<![endif]-->
+    <!-- HTML5 Shiv events (end)-->
+    <script type="text/javascript" src="js/nav-resp.js"></script>
+<script type="text/javascript" src="js/colorize.js"></script>
+	<!-- Favicons
+  ================================================== -->
+	<link rel="shortcut icon" href="images/floatward_fav.ico">
+
+    </head>
+<body>
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+<div id="wrap">
+<!--<section id="top-head">
+<div class="container">
+<!--<div class="top-links"><img src="images/ico-ad04.png" alt=""> <a href="#">Form</a> | <a href="#">Terms</a> | <a href="#">Contact</a></div>
+<div class="top-social"><a href="expert_sign_up.html"><img src="images/expert_signup.png" alt="images/expert_signup_over.png"></a></div></div>
+<a href="#" class="magicmore">Expert programmers, Join us and start earning money</a></p>-->
+<!--<div class="magic-link alignright">
+<a class="get shadow1" href="expert_sign_up.html">Expert programmers Sign up</a><br class="clear" /></div>
+</section>-->
+<header id="header" class="container">
+<div class="four columns logo"><a href="http://www.floatward.com"><img id="img-logo" src="images/logo_floatward_50.png" alt="logo"></a><br>
+<h4 class="slogan1">Better code, Faster.</h4></div>
+<nav id="nav-wrap" class="twelve columns">
+					<ul id="nav">
+				<li><a data-description="Overview" href="http://www.floatward.com">Home</a>
+				</li>
+				<li><a data-description="Learn how it works" href="how.html">How</a>
+						</li>
+				</li>
+				<li><a data-description="Our plans"  href="pricing.html">Pricing</a>
+				<li><a data-description="Time to meet Floatward"  href="about.html">About</a></li>
+				</li>
+			</ul>
+	</nav>
+		<!-- /nav-wrap -->
+<!--<p>&nbsp;</p>-->
+</header><!-- end-header -->
+<section id="headline">
+<div class="container">
+<div class="clear"></div>
+<h2>Sign up with us, start helping others and earn money</h2>
+</div>
+</section>
+<section class="container page-content" >
+<!--<div class="one-third column">
+<h4>One third</h4>
+<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+
+Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+
+</div>
+<div class="one-third column">
+<h4>One third</h4>
+<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+
+Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+
+</div>
+<div class="one-third column">
+<h4>One third</h4>
+<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+
+Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+
+</div>
+<div class="clear"></div>
+<div class="sixteen columns"><hr></div>
+
+<div class="eight columns">
+<h4>One Half</h4>
+<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+
+Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Med ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+
+</div>
+<div class="eight columns">
+<h4>One Half</h4>
+<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+
+Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Med ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+
+</div>-->
+<div class="clear"></div>
+<div class="sixteen columns"><hr></div>
+
+<div class="eight columns">
+<h4>We build a community of top notch developers that are willing to contribute from their knowledge to others, the main difference about Floatward is that we value your time and efforts, and we are paying you for that.</h4>
+<strong>We are not replacing Stackoverflow and as such, we found out that 80% of developers spend 25% of their time solving problems. so, many problem could be solved by existing online resources, but when you have a tight schedule, and need to get immediate assistance, you would like someone on your side, and that is what we offer.
+On demand tool to solve very specific technological problems, easier and faster.</strong>
+<br/>
+<br/>
+<h3>How it works</h3>
+<ul>
+<li class="arrow"><strong>Sign up</strong> with us</li>
+<li class="arrow"><strong>Set your profile,</strong> or import it from Github or Stackoverflow</li>
+<li class="arrow">Let us know what are <strong>your Forte expertise,</strong> those your are confident to know much better than others, that you would like to consult on</li>
+<li class="arrow"><strong>Install our app</strong> and once you have time slot you feel like to helping others, set your status to <strong>online,</strong> and only then others can approach you with assistance requests.</li>
+</ul>
+<h3>Helping others</h3>
+Once you are called by a colleague, you both will be connected using a Google Hangout session, so you could chat, talk, see each other, and obviously share desktops to go through code.<br/>
+Since we are charging for this time, please try to be focused and efficient as possible.
+<br/>
+<br/>
+<h3>Getting paid</h3>
+You are getting paid for two things.
+<ul>
+<li class="arrow"><strong>Session time -</strong> the actual time you have helped others, we charge by the minute, so we aggregate the total session time per month and deliver the money to your bank account</li>
+
+<li class="arrow"><strong>Online time -</strong> in some cases we’ll be offering a payment for people to be ready to help others, in order to make sure that there are enough experts out there that can solve the community members urgent issues.
+So, you’ll be paid just to be Online for a period of time</li>
+</ul>
+<br/>
+</div>
+
+<div class="eight columns">
+<div class="one-half column">
+
+</div>
+
+<div class="container">
+<!--<div class="clear"></div>-->
+<div class="sixteen columns"><hr></div>
+<div class="one-half column">
+<!--<h2>Sign up with us, start helping others and earn money</h2>-->
+</div>
+</div>
+<!--<div class="seven columns">-->
+<div class="contact-form">
+<div class="clr"></div><br />
+<form action="" method="post" id="frmContact">
+<h5>Your name</h5>
+<input name="txtName" type="text" class="txbx" placeholder="First and last name" id="name2" /><br />
+<h5>Email address</h5>
+<input name="txtName" type="text" class="txbx" placeholder="Your email address" id="email2"/><br />
+<h5>Technology fields you would like to consult in</h5>
+<input name="txtName" type="text" class="txbx" placeholder="Type your field" id="tech2" /><br />
+<h5>Your country</h5>
+<input name="txtEmail" type="text" class="txbx" placeholder="Your conuntry" id="country" /><br />
+<h5>Lanuages, Framework and Library you can consult in</h5>
+<input name="txtSubject" type="text" class="txbx" id="lang2" placeholder="Languages, framework and libraries" /><br />
+<div class="erabox">
+<h5>Anything you would like us to know</h5>
+<textarea name="txtText"cols="" rows="" class="txbx era" id="question2"></textarea><br />
+<input name="" type="button" class="sendbtn" value="Submit" id="sendbtnUserJava"/>
+
+<div id="spanMessage">
+</div>
+</div>
+</form>
+</div><!-- end-contact-form  -->
+
+<!--<div class="clear"></div>
+<div class="sixteen columns"><hr></div>
+
+<div class="one-third column">
+<h4>One third</h4>
+<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+
+Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+
+</div>
+<div class="two-thirds column">
+<h4>Two thirds</h4>
+<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+
+Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc Med ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+
+</div>
+
+<div class="clear"></div>
+<div class="sixteen columns"><hr></div>
+
+<div class="four columns">
+<h4>One fourth</h4>
+<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+
+Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+
+</div>
+<div class="four columns">
+<h4>One fourth</h4>
+<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+
+Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+
+</div>
+<div class="four columns">
+<h4>One fourth</h4>
+<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+
+Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+
+</div>
+<div class="four columns">
+<h4>One fourth</h4>
+<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+
+Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+
+</div>
+
+<div class="clear"></div>
+<div class="sixteen columns"><hr></div>
+
+<div class="three columns">
+<h4>One fifth</h4>
+<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+
+Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+
+</div>
+<div class="three columns">
+<h4>One fifth</h4>
+<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+
+Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+
+</div>
+<div class="three columns">
+<h4>One fifth</h4>
+<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+
+Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+
+</div>
+<div class="three columns">
+<h4>One fifth</h4>
+<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+
+Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+
+</div>
+<div class="three columns">
+<h4>One fifth</h4>
+<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit etiam feugiat nunc ut.</strong>
+
+Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+
+</div>-->
+
+<div class="white-space"></div>
+
+</section><!-- container -->
+
+<footer id="footer">
+<div class="container footer-in">
+<div class="disclaimer four columns">
+<h4 class="subtitle">Disclaimer</h4>
+<br />
+<p>
+Important: We are building up, we'll launch our service once we can supply the quality of service we would like to entitle our clients.
+</p>
+<br />
+<div class="copyright-txt">&nbsp; Floatward © 2013. All Rights Reserved.<br>
+<a href="#" class="terms">Terms of Service</a> | <a href="#" class="terms">Privacy Policy</a></div>
+</div><!-- Disclaimer -->
+
+
+<div class="four columns">
+<h4 class="subtitle">Contact Information</h4>
+<br />
+<p><img src="images/social_address.png" class="alignleft"  alt="">&nbsp;<strong>Address:</strong>
+<br />
+Centro Culturale Santa Chiara, via Santa croce 65, 38122 Trento, Italy</p>
+
+<p><img src="images/social_phone.png" class="alignleft" alt="">&nbsp;<strong>Phone:</strong>
+<br />
++ 39 (388) 639 5038<br />
+</p>
+
+<p><img src="images/social_mail.png" class="alignleft" alt="">&nbsp;<strong>Email:</strong>
+<br />
+info@floatward.com<br />
+</p>
+</div><!-- end-follow2 -->
+
+<div class="four columns">
+<!--<h4 class="subtitle">flickr photostream</h4>
+<br />
+<div class="flickr-feed">
+<script type="text/javascript" src="http://www.flickr.com/badge_code.gne?count=12&display=random&size=square&nsid=36587311@N08&raw=1"></script>
+<div class="clear"></div>
+</div>
+</div><!-- end-flickr -->
+
+<div class="four columns">
+<!--<h4 class="subtitle">Contact Information</h4>
+<br />
+<p><img src="images/social_address.png" class="alignleft"  alt="">&nbsp;<strong>Address:</strong>
+<br />
+No.28 - 63739 street lorem ipsum City, Country</p>
+
+<p><img src="images/social_phone.png" class="alignleft" alt="">&nbsp;<strong>Phone:</strong>
+<br />
++ 1 (234) 567 8901<br />
+</p>
+
+<p><img src="images/social_mail.png" class="alignleft" alt="">&nbsp;<strong>Email:</strong>
+<br />
+support@yoursite.com<br />
+</p>
+</div><!-- end-contact2 -->
+</div><!-- end-footer-in -->
+<!--<div class="footbot" >
+<div class="footer-navi">
+<a href="#">Home</a> | <a href="#">About</a> | <a href="#">Contact</a> | <a href="#">Blog</a> | <a href="#">Portfolio</a>
+</div>
+<img src="images/logo-footer.png" alt="">
+</div><!-- end-footbot -->
+</footer>
+<!-- end-footer -->
+<span id="scroll-top"><a class="scrollup"></a></span>
+</div><!-- end-wrap -->
+<!-- End Document
+================================================== -->
+<script type="text/javascript" src="js/yalin-custom.js" ></script>
+
+</body>
+</html>
